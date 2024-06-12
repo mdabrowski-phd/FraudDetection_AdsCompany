@@ -6,6 +6,8 @@ This is a standard example of tasks we solve at *Ads Company*. You have a datase
 
 Your task is to build model and find appropriate model evaluation metric. Prepare and present `Jupyter` notebook going over short exploratory analysis of data, data modelling, prediction and evaluation. Share your feedback about data and the model – did it work for this dataset? Is anything missing, or you would have done differently?
 
+![img](results/output_116_0.png)
+
 ## Data
 In each file `label` and `ID` variables are provided: `label` indicates `1` if `ID` was fraudulent, `0` if not fraudulent; `ID` is an identifier of a user. On each file, for every `ID` the following features are calculated:
 
@@ -30,6 +32,8 @@ In each file `label` and `ID` variables are provided: `label` indicates `1` if `
 - `clicks_fraud_ctr` - % share of clicks with high CTR
 - `clicks_fraud_6` - % share of clicks with fraud signal 6
 
+![img](results/output_52_0.png)
+
 ## Analysis plan
 1. Extract the raw data
 2. Data cleaning (duplicates)
@@ -47,3 +51,5 @@ I have presented several machine learning models trained on the initial dataset.
 The `ID` column is typically dropped when preparing data for machine learning because it serves as a unique identifier for each row and does not contain information relevant to predicting the target variable (in this case, whether a user is fraudulent). Including the `ID` column in the feature set can introduce noise and may negatively impact the performance of the model. The model might inadvertently learn patterns based on the unique `ID`s, which do not generalize well to unseen data. However, if there are specific scenarios or features derived from `ID` that could be useful, one should consider those carefully.
 
 Having access to temporal acpects of the data, some temporal patters can be potentially found wchich might be crucial in detecting fraud. Also, it might be interesting to integrating the trained model with unsupervised anomaly detection methods (including clustering or Gaussian mixture models) to flag potential fraudulent activities that may not be captured by the supervised techniques. As mentioned through the analysis, several other approaches can be added, including dimensionality reduction or more sophisticated features engineering. It will be nice to check whether the binned or categorical variables changes the performance dramatically as they will be less nosiy. Morover, data quantization will increase the speed of computation.
+
+![img](results/output_75_0.png)
